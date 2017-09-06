@@ -1,15 +1,7 @@
-console.log("you have javascript");
-
-
-var user = {
-  name: "Alex",
-  age: 22,
-  pets: ["Jocko", "Rose"],
-  num_pets: count()
-};
-
-function count(){
-  return this.user.pets.length;
+$('#user-form').on('submit', function(e){
+  var username = $ ('#username').val();
+$('#results').append('<li><a href="https://api.github.com/users/' + username + '">' + username + '</a></li>');
+  console.log(username);
+  e.preventDefault();
 }
-
-console.log(user.num_pets);
+);
